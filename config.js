@@ -1,9 +1,9 @@
 const config = {
   "admins": [],
   "support": [],
-  "token": "NDU4NTY5NTM3Mjg2MTc2NzY4.DnVwxQ.V6bogJKpDlMUah-EddyS_y0qt4A",
+  "token": process.env.TOKEN,
   "dashboard" : {
-    "oauthSecret": "QGKnRNJ8RD-AuFMsZw8zj6tLu_-tg4RD",
+    "oauthSecret": process.env.SECRET,
     "callbackURL": 'http://localhost:8181/callback',
     "sessionSecret": "cookiebot",
     "domain": "localhost",
