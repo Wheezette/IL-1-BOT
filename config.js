@@ -1,5 +1,5 @@
 const config = {
-  "admins": [],
+  "admins": ["331439167881871362"],
   "support": [],
   "token": process.env.TOKEN,
   "dashboard" : {
