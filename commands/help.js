@@ -52,7 +52,8 @@ class Help extends Command {
         if (level < this.client.levelCache[command.conf.permLevel]) return;
         const embed123 = new Discord.RichEmbed()
         .setAuthor(`Komenda ${command.help.name}`)
-        .setDescription(`${command.help.description} \n**Użycie:** ${command.help.usage} \n**Aliasy:** ${command.conf.aliases.join(", ")}`);
+        .setDescription(`${command.help.description} \n**Użycie:** ${command.help.usage} \n**Aliasy:** ${command.conf.aliases.join(", ")}`)
+        .setFooter(`${moment(message.createdAt).format('HH:mm:ss')} | Użył(a): ${message.author.tag}.`);
         message.channel.send(embed123);
         //message.channel.send(`= ${command.help.name} = \n${command.help.description}\nUżycie: ${command.help.usage}\nAliasy: ${command.conf.aliases.join(", ")}`, {code:"asciidoc"});
       }
