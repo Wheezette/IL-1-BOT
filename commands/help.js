@@ -1,4 +1,5 @@
 const Command = require("../base/Command.js");
+const Discord = require("discord.js");
 
 /*
   The HELP command is used to display every command's name and description
@@ -49,7 +50,11 @@ class Help extends Command {
       if (this.client.commands.has(command)) {
         command = this.client.commands.get(command);
         if (level < this.client.levelCache[command.conf.permLevel]) return;
-        message.channel.send(`= ${command.help.name} = \n${command.help.description}\nUżycie: ${command.help.usage}\nAliasy: ${command.conf.aliases.join(", ")}`, {code:"asciidoc"});
+        const embed123 = new Discord.RichEmbed()
+        .setAuthor(`Komenda ${command.help.name}`)
+        .setDescription(`${command.help.description} \n**Użycie:** ${command.help.usage} \n**Aliasy:** ${command.conf.aliases.join(", ")}`);
+        message.channel.send(embed123);
+        //message.channel.send(`= ${command.help.name} = \n${command.help.description}\nUżycie: ${command.help.usage}\nAliasy: ${command.conf.aliases.join(", ")}`, {code:"asciidoc"});
       }
     }
   }
