@@ -30,12 +30,12 @@ class Eval extends Command {
   //  } catch (err) {
    //   message.channel.send(`\`ERROR\` \`\`\`xl\n${await this.client.clean(this.client, err)}\n\`\`\``);
  //   }
-    if(!args[0]) return message.channel.send(`${bot.emojis.find(`name`, 'error')}` + " Proszę, abyś podał(a) kod, który chcesz evalować. Jeśli nie wiesz o co chodzi, wpisz `cb!help eval`.")
+    if(!args[0]) return message.channel.send("Proszę, abyś podał(a) kod, który chcesz evalować. Jeśli nie wiesz o co chodzi, wpisz `cb!help eval`.")
     let result = eval(args.join(" ")).toString()
     let embed = new Discord.RichEmbed()
           //.setTitle("Eval")
-    .addField(`${client.emojis.find(`name`, 'jsonfile')} Wejście`, "```"+args.join(" ")+"```")
-    .addField(`${client.emojis.find(`name`, 'txt')} Wyjście`, "```"+result+"```")
+    .addField(`Wejście`, "```"+args.join(" ")+"```")
+    .addField(`Wyjście`, "```"+result+"```")
     .setColor("RANDOM")
     .setFooter(`Kod evalował(a) ${message.author.tag}`, `https://cdn.discordapp.com/emojis/472480341299298304.png?v=1`)
      message.channel.send(embed);
