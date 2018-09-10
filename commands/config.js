@@ -88,8 +88,8 @@ class Config extends Command {
       Object.entries(settings).forEach(([key, value]) => {
         array.push(`${key}${" ".repeat(20 - key.length)}::  ${value}`); 
       });
-      await message.channel.send(`**KONFIGURACJA SERWERA** \n\```${array.join("\n")```\\ncookiebot 2018`);
-     // await message.channel.send(`= Konfiguracja serwera =\n${array.join("\n")}`, {code: "asciidoc"});
+   //   await message.channel.send(`**KONFIGURACJA SERWERA** \n\```${array.join("\n")```\\ncookiebot 2018`);
+      await message.channel.send(`= Konfiguracja serwera =\n${array.join("\n")}`, {code: "asciidoc"});
     }
   }
 }
