@@ -5,6 +5,44 @@ module.exports = class {
 
   async run() {
 
+    setInterval (function (){
+    var statusrand  = Math.floor(Math.random() * 8 + 1);
+    if (statusrand === 1) {
+      client.user.setActivity(`Dashboard wkrótce!`);   
+      console.log(statusrand);
+    }
+    if (statusrand === 2) {
+      client.user.setActivity(`Użyj -help`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 3) {
+      var d = new Date();
+      var d1 = new Date();
+              client.user.setActivity(d.getHours() + ":" + d1.getMinutes());  
+              console.log(statusrand);
+    }
+    if (statusrand === 4) {
+      client.user.setActivity(`😈 https://discord.gg/WTekf4a`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 5) {
+      client.user.setActivity(`${client.guilds.size} serwerów!`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 6) {
+      client.user.setActivity(`${client.users.size} użytkowników!`); 
+      console.log(statusrand); 
+    }
+    if (statusrand === 7) {
+      client.user.setActivity(`${client.channels.size} kanałów!`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 8) {
+      client.user.setActivity(`Skonfiguruj swoj serwer: -config!`);  
+      console.log(statusrand);
+    }
+
+  }, 10000);
     // Why await here? Because the ready event isn't actually ready, sometimes
     // guild information will come in *after* ready. 1s is plenty, generally,
     // for all of them to be loaded.
@@ -32,7 +70,7 @@ module.exports = class {
     
     // Set the game as the default help command + guild count.
     // NOTE: This is also set in the guildCreate and guildDelete events!
-    this.client.user.setActivity({game: {name: `${this.client.settings.get("default").prefix}help | ${this.client.guilds.size} servers.`, type:0}});
+ //   this.client.user.setActivity({game: {name: `${this.client.settings.get("default").prefix}help | ${this.client.guilds.size} servers.`, type:0}});
 
     // Log that we're ready to serve, so we know the bot accepts commands.
     this.client.logger.log(`${this.client.user.tag}, został włączony. ${this.client.users.size} użytkowników na ${this.client.guilds.size} serwerach.`, "ready");  }
