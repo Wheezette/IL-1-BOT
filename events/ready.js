@@ -8,37 +8,35 @@ module.exports = class {
     setInterval (function (){
     var statusrand  = Math.floor(Math.random() * 8 + 1);
     if (statusrand === 1) {
-      client.user.setActivity(`Dashboard wkrótce!`);   
+      this.client.user.setActivity(`Dashboard wkrótce!`);   
       console.log(statusrand);
     }
     if (statusrand === 2) {
-      client.user.setActivity(`Użyj -help`);  
+      this.client.user.setActivity(`Użyj -help`);  
       console.log(statusrand);
     }
     if (statusrand === 3) {
-      var d = new Date();
-      var d1 = new Date();
-              client.user.setActivity(d.getHours() + ":" + d1.getMinutes());  
-              console.log(statusrand);
+      this.client.user.setActivity(`"-" to domyślny prefix`);  
+      console.log(statusrand);
     }
     if (statusrand === 4) {
-      client.user.setActivity(`😈 https://discord.gg/WTekf4a`);  
+      this.client.user.setActivity(`😈 https://discord.gg/WTekf4a`);  
       console.log(statusrand);
     }
     if (statusrand === 5) {
-      client.user.setActivity(`${client.guilds.size} serwerów!`);  
+      this.client.user.setActivity(`${client.guilds.size} serwerów!`);  
       console.log(statusrand);
     }
     if (statusrand === 6) {
-      client.user.setActivity(`${client.users.size} użytkowników!`); 
+      this.client.user.setActivity(`${client.users.size} użytkowników!`); 
       console.log(statusrand); 
     }
     if (statusrand === 7) {
-      client.user.setActivity(`${client.channels.size} kanałów!`);  
+      this.client.user.setActivity(`${client.channels.size} kanałów!`);  
       console.log(statusrand);
     }
     if (statusrand === 8) {
-      client.user.setActivity(`Skonfiguruj swoj serwer: -config!`);  
+      this.client.user.setActivity(`Skonfiguruj swoj serwer: -config!`);  
       console.log(statusrand);
     }
 
