@@ -4,43 +4,6 @@ module.exports = class {
   }
 
   async run() {
-
-    setInterval (function (){
-    var statusrand  = Math.floor(Math.random() * 8 + 1);
-    if (statusrand === 1) {
-      this.client.user.setActivity(`Dashboard wkrótce!`);   
-      console.log(statusrand);
-    }
-    if (statusrand === 2) {
-      this.client.user.setActivity(`Użyj -help`);  
-      console.log(statusrand);
-    }
-    if (statusrand === 3) {
-      this.client.user.setActivity(`"-" to domyślny prefix`);  
-      console.log(statusrand);
-    }
-    if (statusrand === 4) {
-      this.client.user.setActivity(`😈 https://discord.gg/WTekf4a`);  
-      console.log(statusrand);
-    }
-    if (statusrand === 5) {
-      this.client.user.setActivity(`${client.guilds.size} serwerów!`);  
-      console.log(statusrand);
-    }
-    if (statusrand === 6) {
-      this.client.user.setActivity(`${client.users.size} użytkowników!`); 
-      console.log(statusrand); 
-    }
-    if (statusrand === 7) {
-      this.client.user.setActivity(`${client.channels.size} kanałów!`);  
-      console.log(statusrand);
-    }
-    if (statusrand === 8) {
-      this.client.user.setActivity(`Skonfiguruj swoj serwer: -config!`);  
-      console.log(statusrand);
-    }
-
-  }, 10000);
     // Why await here? Because the ready event isn't actually ready, sometimes
     // guild information will come in *after* ready. 1s is plenty, generally,
     // for all of them to be loaded.
