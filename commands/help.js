@@ -1,3 +1,4 @@
+
 const Command = require("../base/Command.js");
 const Discord = require("discord.js");
 const moment = require("moment");
@@ -44,7 +45,19 @@ class Help extends Command {
         }
         output += `${settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
       });
-      message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
+      const helpmsg = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle('Moje polecenia')
+        .setDescription("Moje komendy są naprawde super, znajdziesz je poniżej!")
+        .addField('Główne (3):', '`stats`, `mylevel`')
+        .addField('Fun (0):', '*Brak komend w tej kategorii*')
+        .addField('Administracyjne (1):', '`config`')
+        .addField('Zdjęcia (0):', '*Brak komend w tej kategorii*')
+        .addField('Information (2):', '`serverinfo`, `profile`')
+        .addField('Adm. Bota (3):', '`reload`, `reboot`, `eval`')
+        .setFooter('Użyj help <komenda> po więcej!')
+    //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
+      message.channel.send(helpmsg);
     } else {
       // Show individual command's help.
       let command = args[0];
