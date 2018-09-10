@@ -87,7 +87,7 @@ class Config extends Command {
       // Otherwise, the default action is to return the whole configuration;
       const array = [];
       Object.entries(settings).forEach(([key, value]) => {
-        array.push(`**${key}**${" ".repeat(20 - key.length)}::  ${value}`); 
+        array.push(`${key}${" ".repeat(15 - key.length)}::  ${value}`); 
       });
       await message.channel.send("**KONFIGURACJA SERWERA** \n```" + `${array.join("\n")}` + "``` cookiebot 2018");
     //  const confEmbed = new Discord.RichEmbed()
