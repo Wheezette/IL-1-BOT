@@ -11,6 +11,7 @@
 // OR the same as:
 // const [action, key, ...value] = args;
 const Command = require("../base/Command.js");
+const Discord = require("discord.js");
 
 class Config extends Command {
   constructor(client) {
@@ -86,10 +87,14 @@ class Config extends Command {
       // Otherwise, the default action is to return the whole configuration;
       const array = [];
       Object.entries(settings).forEach(([key, value]) => {
-        array.push(`${key}${" ".repeat(20 - key.length)}::  ${value}`); 
+        array.push(`**${key}**${" ".repeat(20 - key.length)}::  ${value}`); 
       });
    //   await message.channel.send(`**KONFIGURACJA SERWERA** \n\```${array.join("\n")```\\ncookiebot 2018`);
-      await message.channel.send(`= Konfiguracja serwera =\n${array.join("\n")}`, {code: "asciidoc"});
+      const confEmbed = new Discord.RichEmbed()
+      .setAuthor("KONFIGURACJA SERWERA")
+      .setDescription(`${array.join("\n")}`);
+      await message.chanel.send(confEmbed);
+     // await message.channel.send(`= Konfiguracja serwera =\n${array.join("\n")}`, {code: "asciidoc"});
     }
   }
 }
