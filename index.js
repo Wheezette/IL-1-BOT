@@ -228,6 +228,45 @@ const init = async () => {
 
 init();
 
+client.on("ready", e => {
+  setInterval (function (){
+    var statusrand  = Math.floor(Math.random() * 8 + 1);
+    if (statusrand === 1) {
+      client.user.setActivity(`Dashboard wkrótce!`);   
+      console.log(statusrand);
+    }
+    if (statusrand === 2) {
+      client.user.setActivity(`Użyj -help`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 3) {
+      client.user.setActivity(`Użyj -help`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 4) {
+      client.user.setActivity(`😈 https://discord.gg/WTekf4a`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 5) {
+      client.user.setActivity(`${client.guilds.size} serwerów!`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 6) {
+      client.user.setActivity(`${client.users.size} użytkowników!`); 
+      console.log(statusrand); 
+    }
+    if (statusrand === 7) {
+      client.user.setActivity(`${client.channels.size} kanałów!`);  
+      console.log(statusrand);
+    }
+    if (statusrand === 8) {
+      client.user.setActivity(`Skonfiguruj swoj serwer: -config!`);  
+      console.log(statusrand);
+    }
+
+  }, 10000);
+});
+
 client.on("disconnect", () => client.logger.warn("Bot is disconnecting..."))
   .on("reconnect", () => client.logger.log("Bot reconnecting...", "log"))
   .on("error", e => client.logger.error(e))
