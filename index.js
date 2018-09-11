@@ -236,11 +236,11 @@ client.on("ready", e => {
       console.log(statusrand);
     }
     if (statusrand === 2) {
-      client.user.setActivity(`Użyj -help`);  
+      client.user.setActivity(`😄 -help`);  
       console.log(statusrand);
     }
     if (statusrand === 3) {
-      client.user.setActivity(`Użyj -help`);  
+      client.user.setActivity(`❓ Jak mogę Ci pomóc?`);  
       console.log(statusrand);
     }
     if (statusrand === 4) {
