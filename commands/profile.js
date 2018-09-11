@@ -25,7 +25,7 @@ class Profile extends Command {
     .addField("Czy jest botem:", `${aUser.bot}`)
     .addField("Status:", `${aUser.presence.status.replace("dnd", "Niedostępny")}`)
     .addField("Aktualna gra:", `${aUser.presence.game ? aUser.presence.game.name : 'Brak'}`)
-    .setFooter(`${moment(message.createdAt).format('HH:mm:ss')} | Użył(a): ${message.author.tag}.`)
+    .setFooter(`${moment.utc(message.createdAt).format('HH:mm:ss')} | Użył(a): ${message.author.tag}.`)
     message.channel.send(userinfo);
   }
 }
