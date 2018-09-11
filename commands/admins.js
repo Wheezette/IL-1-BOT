@@ -15,7 +15,7 @@ class Admins extends Command {
     const embed = new Discord.RichEmbed()
     .setAuthor("Administracja bota")
     .addField("Developer", "xCookieTM#9613")
-    .addField("Vice Developer", "rkubaplYT#6360")
+    .addField("Vice Developer", "rkubaplYT#6360 \nBlackuu#8732")
     .addField("Global Support", "*Brak uzytkownikow w tej kategorii*")
     message.channel.send(embed);
   }
