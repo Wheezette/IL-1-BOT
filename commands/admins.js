@@ -14,8 +14,8 @@ class Admins extends Command {
   async run(message, args, level) { // eslint-disable-line no-unused-vars
     const embed = new Discord.RichEmbed()
     .setAuthor("Administracja bota")
-    .addField("Developer / Twóca CookieBOT?a", "xCookieTM#9613")
-    .addField("Vice Developer", "*Brak użytkownikow w tej kategorii*")
+    .addField("Developer", "xCookieTM#9613")
+    .addField("Vice Developer", "rkubaplYT#6360")
     .addField("Global Support", "*Brak uzytkownikow w tej kategorii*")
     message.channel.send(embed);
   }
