@@ -4,7 +4,7 @@ const config = {
   "token": process.env.TOKEN,
   "dashboard" : {
     "oauthSecret": process.env.SECRET,
-    "callbackURL": 'http://ciebot.herokuapp.com/callback',
+    "callbackURL": 'http://ciebot.herokuapp.com:8181/callback',
     "sessionSecret": "cookiebot",
     "domain": "herokuapp",
     "port": 8181
