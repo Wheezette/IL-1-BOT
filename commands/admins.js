@@ -16,7 +16,7 @@ class Admins extends Command {
     .setAuthor("Administracja bota")
     .addField("Developer", "xCookieTM#9613")
     .addField("Vice Developer", "rkubaplYT#6360 \nBlackuu#8732")
-    .addField("Global Support", "*Brak uzytkownikow w tej kategorii*")
+    .addField("Global Support", "polop2301#0166 \nVortene#8025")
     message.channel.send(embed);
   }
 
