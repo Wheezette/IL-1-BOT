@@ -13,7 +13,7 @@ class Invite extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-vars
     const embed = new Discord.RichEmbed()
-    .setDescription("Aby dołączyć na serwer bota >> [KLIK](https://discord.gg/WTekf4a) << (dowiesz się tam o aktualizacjach oraz otrzymasz pomoc z botem) \nAby zaprosić bota na swój serwer >> [KLIK](https://discordapp.com/api/oauth2/authorize?client_id=458569537286176768&permissions=842394839&scope=bot) <<");
+    .setDescription("Aby dołączyć na serwer bota >> [KLIK](https://discord.gg/WTekf4a) << (dowiesz się tam o aktualizacjach oraz otrzymasz pomoc z botem) \n \nAby zaprosić bota na swój serwer >> [KLIK](https://discordapp.com/api/oauth2/authorize?client_id=458569537286176768&permissions=842394839&scope=bot) <<");
      message.channel.send(embed);
   }
 }
