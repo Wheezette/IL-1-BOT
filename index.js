@@ -232,7 +232,7 @@ client.on("ready", e => {
   setInterval (function (){
     var statusrand  = Math.floor(Math.random() * 8 + 1);
     if (statusrand === 1) {
-      client.user.setActivity(`Dashboard wkrótce!`);   
+      client.user.setActivity(`Dashboard soon!`);   
       console.log(statusrand);
     }
     if (statusrand === 2) {
@@ -240,7 +240,7 @@ client.on("ready", e => {
       console.log(statusrand);
     }
     if (statusrand === 3) {
-      client.user.setActivity(`❓ Jak mogę Ci pomóc?`);  
+      client.user.setActivity(`❓ Can I help you?`);  
       console.log(statusrand);
     }
     if (statusrand === 4) {
@@ -248,15 +248,15 @@ client.on("ready", e => {
       console.log(statusrand);
     }
     if (statusrand === 5) {
-      client.user.setActivity(`${client.guilds.size} serwerów!`);  
+      client.user.setActivity(`${client.guilds.size} servers.`);  
       console.log(statusrand);
     }
     if (statusrand === 6) {
-      client.user.setActivity(`${client.users.size} użytkowników!`); 
+      client.user.setActivity(`${client.users.size} users.`); 
       console.log(statusrand); 
     }
     if (statusrand === 7) {
-      client.user.setActivity(`${client.channels.size} kanałów!`);  
+      client.user.setActivity(`${client.channels.size} channels.`);  
       console.log(statusrand);
     }
     if (statusrand === 8) {
