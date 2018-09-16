@@ -17,7 +17,8 @@ const config = {
   "systemNotice": "true",
   "welcomeChannel": "witaj-żegnaj",
   "welcomeMessage": "Witamy Cię **{{user}}** na naszym serwerze!",
-  "welcomeEnabled": "false"
+  "welcomeEnabled": "false",
+  "language": "pl"
 },
   permLevels: [
     { level: 0,
