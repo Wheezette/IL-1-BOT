@@ -24,6 +24,7 @@ class Reboot extends Command {
     } catch (e) {
       console.log(e);
     }
+    }
     const settings = this.client.getSettings(message.guild.id);
     if (settings.language === "en") {
     try {
@@ -34,6 +35,7 @@ class Reboot extends Command {
       process.exit(1);
     } catch (e) {
       console.log(e);
+    }
     }
   }
 }
