@@ -14,7 +14,7 @@ class Reboot extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-vars
     try {
-      await message.channel.send("Bot został wyłączony.");
+      await message.channel.send("**TRWA RESTART BOTA...**");
       this.client.commands.forEach(async cmd => {
         await this.client.unloadCommand(cmd);
       });
