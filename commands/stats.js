@@ -17,7 +17,7 @@ class Stats extends Command {
     const duration = moment.duration(this.client.uptime).format(" D [dni], H [godz], m [min], s [sek]");
     const embed = new Discord.RichEmbed()
     .setColor("#FA8072")
-    .setAuthor("COOKIEBOT STATISTICS")
+    .setAuthor("Kelly's Statistics")
     .addField("• Mem Usage:", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
     .addField("• Uptime:", `${duration}`)
     .addField("• Users:", `${this.client.users.size.toLocaleString()}`)
@@ -25,7 +25,7 @@ class Stats extends Command {
     .addField("• Channels:", `${this.client.channels.size.toLocaleString()}`)
     .addField("• Discord.js:", `v${version}`)
     .addField("• Node:", `${process.version}`)
-    .setFooter(`${moment(message.createdAt).format('HH:mm')} | Użył(a): ${message.author.tag}.`)
+    .setFooter(`©2018-2019 KellyBOT`)
     message.channel.send(embed);
     //message.channel.send(`= STATISTICS =
   //• Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
