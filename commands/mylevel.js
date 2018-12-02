@@ -12,7 +12,7 @@ class MyLevel extends Command {
 
   async run(message, args, level) {
     const friendly = this.client.config.permLevels.find(l => l.level === level).name;
-    message.channel.send(`Twój poziom uprawnień to: **${friendly}** (**${level}**)`);
+    message.channel.send(`**Hi User!** Your permission level on this server: **${friendly}** (**${level}**)`);
   }
 }
 
