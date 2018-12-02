@@ -5,7 +5,7 @@ const config = {
   "dashboard" : {
     "oauthSecret": process.env.SECRET,
     "callbackURL": 'http://ciebot.herokuapp.com:8181/callback',
-    "sessionSecret": "cookiebot",
+    "sessionSecret": "kelly",
     "domain": "herokuapp",
     "port": 8181
   },
@@ -15,18 +15,18 @@ const config = {
   "modRole": "Moderator",
   "adminRole": "Administrator",
   "systemNotice": "true",
-  "welcomeChannel": "witaj-żegnaj",
-  "welcomeMessage": "Witamy Cię **{{user}}** na naszym serwerze!",
+  "welcomeChannel": "server-lobby",
+  "welcomeMessage": "Welcome **{MEMBER}** to the **{SERVER}** server.!",
   "welcomeEnabled": "false",
   "language": "pl"
 },
   permLevels: [
     { level: 0,
-      name: "Użytkownik", 
+      name: "User", 
       check: () => true
     },
     { level: 2,
-      name: "Moderator",
+      name: "Server Moderator",
       check: (message) => {
         try {
           const modRole = message.guild.roles.find(r => r.name.toLowerCase() === message.settings.modRole.toLowerCase());
@@ -37,7 +37,7 @@ const config = {
       }
     },
     { level: 3,
-      name: "Administrator", 
+      name: "Server Admin", 
       check: (message) => {
         try {
           const adminRole = message.guild.roles.find(r => r.name.toLowerCase() === message.settings.adminRole.toLowerCase());
@@ -48,19 +48,19 @@ const config = {
       }
     },
     { level: 4,
-      name: "Właściciel Serwera", 
+      name: "Server Owner", 
       check: (message) => message.channel.type === "text" ? (message.guild.owner.user.id === message.author.id ? true : false) : false
     },
     { level: 8,
-      name: "Globalny Support",
+      name: "Kelly's Global Support",
       check: (message) => config.support.includes(message.author.id)
     },
     { level: 9,
-      name: "Developer Bota",
+      name: "Kelly's Developer",
       check: (message) => config.admins.includes(message.author.id)
     },
     { level: 10,
-      name: "Twórca CookieBOT'a", 
+      name: "Kelly's Creator", 
       check: (message) => message.client.appInfo.owner.id === message.author.id
     }
   ]
