@@ -1,3 +1,3 @@
 # BOT4
 
-Fajny bot
+Fajny bot:)
