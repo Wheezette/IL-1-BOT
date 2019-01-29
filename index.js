@@ -232,35 +232,35 @@ client.on("ready", e => {
   setInterval (function (){
     var statusrand  = Math.floor(Math.random() * 8 + 1);
     if (statusrand === 1) {
-      client.user.setActivity(`Dashboard soon!`);   
+      client.user.setActivity(`n!help | ${client.guilds.size} servers.`);   
       console.log(statusrand);
     }
     if (statusrand === 2) {
-      client.user.setActivity(`😄 -help`);  
+      client.user.setActivity(`n!help | ${client.users.size} users.`);  
       console.log(statusrand);
     }
     if (statusrand === 3) {
-      client.user.setActivity(`❓ Can I help you?`);  
+      client.user.setActivity(`n!help | ${client.channels.size} channels.`);  
       console.log(statusrand);
     }
     if (statusrand === 4) {
-      client.user.setActivity(`😈 https://discord.gg/WTekf4a`);  
+      client.user.setActivity(`n!help | Go to support server!`);  
       console.log(statusrand);
     }
     if (statusrand === 5) {
-      client.user.setActivity(`${client.guilds.size} servers.`);  
+      client.user.setActivity(`n!help | ${client.guilds.size} servers.`);  
       console.log(statusrand);
     }
     if (statusrand === 6) {
-      client.user.setActivity(`${client.users.size} users.`); 
+      client.user.setActivity(`n!help | ${client.users.size} users.`); 
       console.log(statusrand); 
     }
     if (statusrand === 7) {
-      client.user.setActivity(`${client.channels.size} channels.`);  
+      client.user.setActivity(`n!help | ${client.channels.size} channels.`);  
       console.log(statusrand);
     }
     if (statusrand === 8) {
-      client.user.setActivity(`Skonfiguruj swoj serwer: -config!`);  
+      client.user.setActivity(`n!help | Use n!config to configure your server.`);  
       console.log(statusrand);
     }
 
