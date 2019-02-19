@@ -52,15 +52,15 @@ const config = {
       check: (message) => message.channel.type === "text" ? (message.guild.owner.user.id === message.author.id ? true : false) : false
     },
     { level: 8,
-      name: "Kelly's Global Support",
+      name: "Vextie Global Support",
       check: (message) => config.support.includes(message.author.id)
     },
     { level: 9,
-      name: "Kelly's Developer",
+      name: "Vextie Developer",
       check: (message) => config.admins.includes(message.author.id)
     },
     { level: 10,
-      name: "Kelly's Creator", 
+      name: "Vextie Creator", 
       check: (message) => message.client.appInfo.owner.id === message.author.id
     }
   ]
