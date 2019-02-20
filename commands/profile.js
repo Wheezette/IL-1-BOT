@@ -22,10 +22,9 @@ class Profile extends Command {
     .addField("Pseudonim:", `${aUser.nickname ? aUser.nickname : "None"}`)
     .addField("Konto utworzone:", `${moment(aUser.createdAt).format('DD.MM.YYYY HH:mm:ss')}`)
     .addField("Dołączył(a) do serwera:", `${moment(aUser.joinedAt).format('DD.MM.YYYY HH:mm:ss')}`)
-    .addField("Czy jest botem:", `${aUser.bot}`)
     .addField("Status:", `${aUser.presence.status.replace("dnd", "Niedostępny")}`)
-    .addField("Aktualna gra:", `${aUser.presence.game ? aUser.presence.game.name : 'Brak'}`)
-    .setFooter(`${moment.utc(message.createdAt).format('HH:mm:ss')} | Użył(a): ${message.author.tag}.`)
+    .addField("Gra w:", `${aUser.presence.game ? aUser.presence.game.name : 'nic'}`)
+    .setFooter(`${moment.utc(message.createdAt).format('HH:mm:ss')} | Vextie by Nastti#5705`)
     message.channel.send(userinfo);
   }
 }
