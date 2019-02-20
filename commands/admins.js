@@ -14,9 +14,10 @@ class Admins extends Command {
   async run(message, args, level) { // eslint-disable-line no-unused-vars
     const embed = new Discord.RichEmbed()
     .setAuthor("Administracja bota")
-    .addField("Developer", "xCookieTM#9613")
-    .addField("Vice Developer", "rkubaplYT#6360 \nBlackuu#8732")
-    .addField("Global Support", "polop2301#0166 \nVortene#8025")
+    .addField("Twórca Vextie", "Nastti#5705")
+    .addField("Developer", "-")
+    .addField("Global Support", "-")
+    .setFooter("Vextie by Nastti#5705")
     message.channel.send(embed);
   }
 
