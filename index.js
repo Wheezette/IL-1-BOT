@@ -232,35 +232,35 @@ client.on("ready", e => {
   setInterval (function (){
     var statusrand  = Math.floor(Math.random() * 8 + 1);
     if (statusrand === 1) {
-      client.user.setActivity(`n!help | ${client.guilds.size} servers.`);   
+      client.user.setActivity(`PORTALCRAFT.pl`);   
       console.log(statusrand);
     }
     if (statusrand === 2) {
-      client.user.setActivity(`n!help | ${client.users.size} users.`);  
+      client.user.setActivity(`${client.users.size} UŻYTKOWNIKÓW`);  
       console.log(statusrand);
     }
     if (statusrand === 3) {
-      client.user.setActivity(`n!help | ${client.channels.size} channels.`);  
+      client.user.setActivity(`WERSJA SERWERA: 1.9-1.13.3`);  
       console.log(statusrand);
     }
     if (statusrand === 4) {
-      client.user.setActivity(`n!help | Go to support server!`);  
+      client.user.setActivity(`TRYB: CREATIVE`);  
       console.log(statusrand);
     }
     if (statusrand === 5) {
-      client.user.setActivity(`n!help | ${client.guilds.size} servers.`);  
+      client.user.setActivity(`WERSJA BOTA: v0.0.1`);  
       console.log(statusrand);
     }
     if (statusrand === 6) {
-      client.user.setActivity(`n!help | ${client.users.size} users.`); 
+      client.user.setActivity(`${client.users.size} UŻYTKOWNIKÓW`); 
       console.log(statusrand); 
     }
     if (statusrand === 7) {
-      client.user.setActivity(`n!help | ${client.channels.size} channels.`);  
+      client.user.setActivity(`BOT BY SweetUnicorn_`);  
       console.log(statusrand);
     }
     if (statusrand === 8) {
-      client.user.setActivity(`n!help | Use n!config to configure your server.`);  
+      client.user.setActivity(`WITAJ! JAK CI MINĄŁ DZIEŃ?`);  
       console.log(statusrand);
     }
 
