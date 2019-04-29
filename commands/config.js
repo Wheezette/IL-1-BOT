@@ -89,7 +89,7 @@ class Config extends Command {
       Object.entries(settings).forEach(([key, value]) => {
         array.push(`${key}${" ".repeat(15 - key.length)}::  ${value}`); 
       });
-      await message.channel.send("**KONFIGURACJA SERWERA** \n```" + `${array.join("\n")}` + "``` Wersja bota z dnia 19.02.2019r.");
+      await message.channel.send("**KONFIGURACJA SERWERA** \n```" + `${array.join("\n")}` + "``` Wersja bota z dnia 29.04.2019r.");
     //  const confEmbed = new Discord.RichEmbed()
     //  .setAuthor("KONFIGURACJA SERWERA")
    //   .setDescription(`${array.join("\n")}`);
