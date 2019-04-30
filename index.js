@@ -232,35 +232,35 @@ client.on("ready", e => {
   setInterval (function (){
     var statusrand  = Math.floor(Math.random() * 8 + 1);
     if (statusrand === 1) {
-      client.user.setActivity(`PortalCraft.pl`);   
+      client.user.setActivity(`PortalCraft.pl`, {type: 'WATCHING'});   
       console.log(statusrand);
     }
     if (statusrand === 2) {
-      client.user.setActivity(`${client.users.size} użytkowników`);  
+      client.user.setActivity(`${client.users.size} użytkowników`, {type: 'STREAMING'});  
       console.log(statusrand);
     }
     if (statusrand === 3) {
-      client.user.setActivity(`Wersja serwera: 1.9-1.13.3`);  
+      client.user.setActivity(`Wersja serwera: 1.9-1.13.3`, {type: 'WATCHING'});  
       console.log(statusrand);
     }
     if (statusrand === 4) {
-      client.user.setActivity(`Tryb: Creative`);  
+      client.user.setActivity(`Tryb: Creative`, {type: 'LISTENING'});  
       console.log(statusrand);
     }
     if (statusrand === 5) {
-      client.user.setActivity(`Wersja bota: v0.0.2`);  
+      client.user.setActivity(`Wersja bota: v0.0.2`, {type: 'WATCHING'});  
       console.log(statusrand);
     }
     if (statusrand === 6) {
-      client.user.setActivity(`${client.users.size} użytkowników`); 
+      client.user.setActivity(`${client.users.size} użytkowników`, {type: 'STREAMING'}); 
       console.log(statusrand); 
     }
     if (statusrand === 7) {
-      client.user.setActivity(`Bot by SweetUnicorn_`);  
+      client.user.setActivity(`Bot by SweetUnicorn_`, {type: 'LISTENING'});  
       console.log(statusrand);
     }
     if (statusrand === 8) {
-      client.user.setActivity(`PortalCraft.pl`);  
+      client.user.setActivity(`PortalCraft.pl`, {type: 'WATCHING'});  
       console.log(statusrand);
     }
 
