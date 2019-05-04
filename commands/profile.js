@@ -17,15 +17,17 @@ class Profile extends Command {
     const userinfo = new Discord.RichEmbed()
     .setColor("FFA07A")
     .setAuthor(`Profil ${aUser.username}`, `https://cdn.discordapp.com/emojis/472480341299298304.png?v=1`)
-    .setThumbnail(aUser.displayAvatarURL)
-    .addField("ID:", `${aUser.id}`)
-    .addField("Pseudonim:", `${aUser.nickname ? aUser.nickname : "None"}`)
-    .addField("Konto utworzone:", `${moment(aUser.createdAt).format('DD.MM.YYYY HH:mm:ss')}`)
-    .addField("Dołączył(a) do serwera:", `${moment(aUser.joinedAt).format('DD.MM.YYYY HH:mm:ss')}`)
-    .addField("Status:", `${aUser.presence.status.replace("dnd", "Niedostępny")}`)
-    .addField("Gra w:", `${aUser.presence.game ? aUser.presence.game.name : 'nic'}`)
-    .setFooter(`${moment.utc(message.createdAt).format('HH:mm:ss')} | Vextie by Nastti#5705`)
+  //  .setThumbnail(aUser.displayAvatarURL)
+   // .addField("ID:", `${aUser.id}`)
+  //  .addField("Pseudonim:", `${aUser.nickname ? aUser.nickname : "None"}`)
+   // .addField("Konto utworzone:", `${moment(aUser.createdAt).format('DD.MM.YYYY HH:mm:ss')}`)
+   // .addField("Dołączył(a) do serwera:", `${moment(aUser.joinedAt).format('DD.MM.YYYY HH:mm:ss')}`)
+   // .addField("Status:", `${aUser.presence.status.replace("dnd", "Niedostępny")}`)
+    //.addField("Gra w:", `${aUser.presence.game ? aUser.presence.game.name : 'nic'}`)
+    //.setFooter(`${moment.utc(message.createdAt).format('HH:mm:ss')} | Vextie by Nastti#5705`)
     message.channel.send(userinfo);
+    message.channel.send("```css\n" + `ID :: ${aUser.id}\nPseudonim :: ${aUser.nickname ? aUser.nickname : "None"}\nKonto utworzone :: ${moment(aUser.createdAt).format('DD.MM.YYYYr. HH:mm:ss')}\nData dołączenia :: ${moment(aUser.joinedAt).format('DD.MM.YYYY HH:mm:ss')}\nStatus :: ${aUser.presence.status.replace("dnd", "Nie przeszkadzać")}\nAktualna Gra :: ${aUser.presence.game ? aUser.presence.game.name : '-----'}` + "\n```");
+
   }
 }
 
