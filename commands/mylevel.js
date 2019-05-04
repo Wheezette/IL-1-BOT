@@ -6,13 +6,14 @@ class MyLevel extends Command {
       name: "mylevel",
       description: "Wyświetli twój poziom uprawnień na tym serwerze.",
       usage: "mylevel",
+      aliases: "perms",
       guildOnly: true
     });
   }
 
   async run(message, args, level) {
     const friendly = this.client.config.permLevels.find(l => l.level === level).name;
-    message.channel.send(`**Hi User!** Your permission level on this server: **${friendly}** (**${level}**)`);
+    message.channel.send(`Twój poziom na tym serwerze: **${friendly}** (**${level}**)`);
   }
 }
 
