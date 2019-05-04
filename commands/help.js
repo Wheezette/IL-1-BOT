@@ -55,9 +55,10 @@ class Help extends Command {
         .addField('Zdjęcia (0):', '*Brak komend w tej kategorii*')
         .addField('Information (2):', '`serverinfo`, `profile`')
         .addField('Adm. Bota (3):', '`reload`, `reboot`, `eval`')
-        .setFooter('Użyj help <komenda> po więcej!')
+        .setFooter('PortalCraft.pl ©2019')
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
-      message.channel.send(helpmsg);
+      //message.channel.send(helpmsg);
+      message.channel.send("**KOMENDY POMOCY**\n```(Główne):\n!stats - statystyki bota\n!mylevel - poziom uprawnien w bocie.\n \n(Administracyjne):\n!config - konfiguracja serwera.\n(Zabawa):\nBrak komend.\n(Zdjęcia):\nBrak komend.\n(Informacja):\n!serverinfo - informacje o serwerze.\n!profile - informacje o użytkowniku.```\n**PortalCraft.pl ©2019**");
     } else {
       // Show individual command's help.
       let command = args[0];
