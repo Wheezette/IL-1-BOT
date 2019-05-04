@@ -1,24 +1,14 @@
 const Discord = require("discord.js");
-
 const Command = require("../base/Command.js");
-
 const moment = require("moment");
 
-
-
-class Profile extends Command {
-
+class Avatar extends Command {
   constructor(client) {
-
     super(client, {
-
-      name: "profile",
-
+      name: "avatar",
       description: "Wyświetli informaje o użytkowniku.",
-
-      usage: "profile [<@użytkownik>]",
-
-      aliases: ["userinfo"]
+      usage: "avatar [<@użytkownik>]",
+      aliases: ["av"]
 
     });
 
@@ -44,4 +34,4 @@ class Profile extends Command {
   }
 }
 
-module.exports = Profile;
+module.exports = Avatar;
