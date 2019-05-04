@@ -58,7 +58,7 @@ class Help extends Command {
         .setFooter('PortalCraft.pl ©2019')
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
       //message.channel.send(helpmsg);
-      message.channel.send("**KOMENDY POMOCY**\n```(Główne):\n!stats - statystyki bota\n!mylevel - poziom uprawnien w bocie.\n \n(Administracyjne):\n!config - konfiguracja serwera.\n(Zabawa):\nBrak komend.\n(Zdjęcia):\nBrak komend.\n(Informacja):\n!serverinfo - informacje o serwerze.\n!profile - informacje o użytkowniku.```\n**PortalCraft.pl ©2019**");
+      message.channel.send("**KOMENDY POMOCY**\n```(Główne):\n!stats - statystyki bota\n!mylevel - poziom uprawnien w bocie.\n \n(Administracyjne):\n!config - konfiguracja serwera.\n\n(Zabawa):\nBrak komend.\n\n(Zdjęcia):\nBrak komend.\n\n(Informacja):\n!serverinfo - informacje o serwerze.\n!profile - informacje o użytkowniku.```\n**PortalCraft.pl ©2019**");
     } else {
       // Show individual command's help.
       let command = args[0];
