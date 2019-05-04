@@ -26,7 +26,7 @@ class Profile extends Command {
     //.addField("Gra w:", `${aUser.presence.game ? aUser.presence.game.name : 'nic'}`)
     //.setFooter(`${moment.utc(message.createdAt).format('HH:mm:ss')} | Vextie by Nastti#5705`)
     //message.channel.send(userinfo);
-    message.channel.send("**INFORMACJE O UŻYTKOWNIKU**\n```css\n" + `Nazwa               ::    ${aUser.username} \nDyskryminator       ::    #${aUser.discriminator}\nID                  :: ${aUser.id}\nPseudonim           ::    ${aUser.nickname ? aUser.nickname : "None"}\nKonto utworzone     ::    ${moment(aUser.createdAt).format('DD.MM.YYYYr. HH:mm:ss')}\nData dołączenia     ::    ${moment(aUser.joinedAt).format('DD.MM.YYYY HH:mm:ss')}\nStatus              ::    ${aUser.presence.status.replace("dnd", "Nie przeszkadzać")}\nAktualna Gra        ::    ${aUser.presence.game ? aUser.presence.game.name : '-----'}\nAvatar użytkownika pod !avatar @${aUser.tag}` + "\n```**PortalCraft.pl ©2019**");
+    message.channel.send("**INFORMACJE O UŻYTKOWNIKU**\n```css\n" + `Nazwa               ::    ${aUser.username} \nDyskryminator       ::    #${aUser.discriminator}\nID                  ::    ${aUser.id}\nPseudonim           ::    ${aUser.nickname ? aUser.nickname : "Brak."}\nKonto utworzone     ::    ${moment(aUser.createdAt).format('DD.MM.YYYYr. HH:mm:ss')}\nData dołączenia     ::    ${moment(aUser.joinedAt).format('DD.MM.YYYY HH:mm:ss')}\nStatus              ::    ${aUser.presence.status.replace("dnd", "Nie przeszkadzać")}\nAktualna Gra        ::    ${aUser.presence.game ? aUser.presence.game.name : '-----'}\nAvatar użytkownika pod !avatar @${aUser.tag}` + "\n```**PortalCraft.pl ©2019**");
 
   }
 }
