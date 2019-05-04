@@ -15,9 +15,9 @@ const config = {
   "modRole": "Moderator",
   "adminRole": "Administrator",
   "systemNotice": "true",
-  "welcomeChannel": "server-lobby",
-  "welcomeMessage": "Welcome **{MEMBER}** to the **{SERVER}** server.!",
-  "welcomeEnabled": "false",
+  "welcomeChannel": "lobby",
+  "welcomeMessage": "Witaj **{MEMBER}** :wave:. Dołączyłeś(aś) właśnie na serwer discord serwera minecraft **PortalCraft.pl**.",
+  "welcomeEnabled": "true",
   "language": "pl"
 },
   permLevels: [
@@ -48,19 +48,19 @@ const config = {
       }
     },
     { level: 4,
-      name: "Server Owner", 
+      name: "Właściciel Serwera", 
       check: (message) => message.channel.type === "text" ? (message.guild.owner.user.id === message.author.id ? true : false) : false
     },
     { level: 8,
-      name: "Vextie Global Support",
+      name: "Administrator Bota",
       check: (message) => config.support.includes(message.author.id)
     },
     { level: 9,
-      name: "Vextie Developer",
+      name: "Programista Bota",
       check: (message) => config.admins.includes(message.author.id)
     },
     { level: 10,
-      name: "Vextie Creator", 
+      name: "Twórczyni Bota", 
       check: (message) => message.client.appInfo.owner.id === message.author.id
     }
   ]
