@@ -35,4 +35,4 @@ class Hug extends Command {
   }
 }
 
-module.exports = Invite;
+module.exports = Hug;
