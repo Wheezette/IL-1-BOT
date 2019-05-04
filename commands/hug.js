@@ -19,14 +19,14 @@ class Hug extends Command {
     let huglinks = ["https://media.giphy.com/media/l0HlOvJ7yaacpuSas/giphy.gif", "https://media.giphy.com/media/xT39CXg70nNS0MFNLy/giphy.gif", "https://media.giphy.com/media/143v0Z4767T15e/giphy.gif", "https://media.giphy.com/media/BVRoqYseaRdn2/giphy.gif", "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif"];
     let math = Math.floor((Math.random() * huglinks.length));
     let hugEmbed = new Discord.RichEmbed()
-    .setColor("RANDOM")
+    .setColor("f083fa")
     .setAuthor(`Użytkownik ${message.author.tag} przytulił(a) ${aUser.tag}.`, 'https://cdn.discordapp.com/emojis/472468044871106591.png?v=1')
     .setImage(huglinks[math])
     let hugMe = new Discord.RichEmbed()
     .setColor("f083fa")
     .setAuthor(`${message.author.tag} przytulił(a) samego/samą siebie.`)
     .setImage(huglinks[math])
-    if(args[0] == message.author) return message.channel.send()
+    if(args[0] == message.author) return message.channel.send(hugMe)
     if(!args[0]) return message.channel.send(hugMe);
 
     message.channel.send(hugEmbed);
