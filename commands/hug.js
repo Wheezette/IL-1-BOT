@@ -21,7 +21,7 @@ class Hug extends Command {
     let hugEmbed = new Discord.RichEmbed()
     .setColor("f083fa")
     .setAuthor(`Użytkownik ${message.author.tag} przytulił(a) ${aUser.tag}.`, 'https://cdn.discordapp.com/emojis/472468044871106591.png?v=1')
-    .setImage("https://tenor.com/view/anime-hug-manga-cuddle-japan-gif-10522729")
+    .setImage("https://media1.tenor.com/images/7e30687977c5db417e8424979c0dfa99/tenor.gif?itemid=10522729")
     //.setImage(huglinks[math])
     let hugMe = new Discord.RichEmbed()
     .setColor("f083fa")
