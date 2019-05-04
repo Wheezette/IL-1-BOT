@@ -9,7 +9,7 @@ class Eval extends Command {
       category:"Bot Admins",
       usage: "eval <expression>",
       aliases: ["ev"],
-      permLevel: "Twórca CookieBOT'a"
+      permLevel: "Twórczyni Bota"
     });
   }
 
@@ -22,14 +22,18 @@ class Eval extends Command {
   //  } catch (err) {
    //   message.channel.send(`\`ERROR\` \`\`\`xl\n${await this.client.clean(this.client, err)}\n\`\`\``);
  //   }
-    if(!args[0]) return message.channel.send("Proszę, abyś podał(a) kod, który chcesz evalować. Jeśli nie wiesz o co chodzi, wpisz `cb!help eval`.")
+    let errorMessage = new Discord.RichEmbed()
+    .setColor("c92a2a")
+    .setAuthor("Wystąpił błąd", "https://cdn.discordapp.com/emojis/574326640444964874.png?v=1")
+    .setDescription("Musisz podać kod, który chcesz eval'ować.")
+    if(!args[0]) return message.channel.send(errorMessage);
     let result = eval(args.join(" ")).toString()
     let embed = new Discord.RichEmbed()
           //.setTitle("Eval")
     .addField(`Wejście`, "```"+args.join(" ")+"```")
     .addField(`Wyjście`, "```"+result+"```")
     .setColor("RANDOM")
-    .setFooter(`Kod evalował(a) ${message.author.tag}`, `https://cdn.discordapp.com/emojis/472480341299298304.png?v=1`)
+    .setFooter(`Kod eval'owany przez ${message.author.tag}`, `https://cdn.discordapp.com/emojis/472480341299298304.png?v=1`)
      message.channel.send(embed);
   }
 }
