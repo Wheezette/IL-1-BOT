@@ -17,7 +17,7 @@ class Avatar extends Command {
 
 
   async run(message, args, level) { // eslint-disable-line no-unused-vars
-    let aUser = message.mentions.users.first() || message.author;
+    let aUser = message.mentions.users.first(); //|| message.author;
     const avatarEmbed = new Discord.RichEmbed()
     .setColor("6f62da")
     .setAuthor(`Avatar ${aUser.tag}`, `https://cdn.discordapp.com/emojis/472480341299298304.png?v=1`)
