@@ -55,7 +55,7 @@ class Help extends Command {
         .addField(':frame_photo: Zdjęcia (0):', '*Brak komend w tej kategorii*')
         .addField(':information_source: Information (2):', '`serverinfo`, `profile`')
         .addField('Adm. Bota (3):', '`reload`, `reboot`, `eval`')
-        .setFooter(`Komenda została użyta przez ${message.member.tag}.`)
+        .setFooter(`Komenda została użyta przez ${message.author.tag}.`)
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
       message.channel.send(helpmsg);
       //message.channel.send("**KOMENDY POMOCY**\n```(Główne):\n!botinfo - informacje o bocie\n!mylevel - poziom uprawnien w bocie.\n \n(Administracyjne):\n!config - konfiguracja serwera.\n\n(Zabawa):\nBrak komend.\n\n(Zdjęcia):\nBrak komend.\n\n(Informacja):\n!serverinfo - informacje o serwerze.\n!profile - informacje o użytkowniku.```\n**2019 GraficznyBot**");
