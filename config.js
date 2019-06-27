@@ -10,7 +10,7 @@ const config = {
     "port": 8181
   },
   defaultSettings: {
-  "prefix": "-",
+  "prefix": "!",
   "modLogChannel": "modlogi",
   "modRole": "Moderator",
   "adminRole": "Administrator",
