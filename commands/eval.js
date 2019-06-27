@@ -9,7 +9,7 @@ class Eval extends Command {
       category:"Bot Admins",
       usage: "eval <expression>",
       aliases: ["ev"],
-      permLevel: "Twórczyni Bota"
+      permLevel: "IceLeaders Team - CEO"
     });
   }
 
