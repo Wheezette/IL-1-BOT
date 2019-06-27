@@ -48,13 +48,13 @@ class Help extends Command {
       const helpmsg = new Discord.RichEmbed()
         .setColor('62eccc')
         .setTitle('Moje Komendy')
-        .setDescription("Poniżej znajduje się spis wszystkich moich komend.")
-        .addField('Główne (3):', ':shield: -> `botinfo`, `mylevel`')
+        .setDescription("Poniżej znajduje się spis wszystkich moich komend.\nUżyj `!help <nazwa_komendy>`, aby uzyskać pomoc związaną z daną komendą.")
+        .addField('Główne (2):', ':shield: -> `botinfo`, `mylevel`')
         .addField('Fun (0):', ':tada: -> *Brak komend w tej kategorii*')
         .addField('Administracyjne (1):', ':tools: ->`config`')
         .addField('Zdjęcia (0):', ':frame_photo: -> *Brak komend w tej kategorii*')
         .addField('Information (3):', ':information_source: -> `serverinfo`, `profile`, `avatar`')
-        .addField(':poop: Adm. Bota (3):', ':radioactive: -> `reload`, `reboot`, `eval`')
+        .addField('Adm. Bota (3):', ':radioactive: -> `reload`, `reboot`, `eval`')
         .setFooter(`Komenda została użyta przez ${message.author.tag}.`)
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
       message.channel.send(helpmsg);
