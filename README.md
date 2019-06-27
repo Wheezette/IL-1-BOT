@@ -1,3 +1,3 @@
-# BOT4
+# IL #1 BOT
 
-Fajny bot:)
+Bot na zamówienie użytkownika tworzony przez The Charlotte.
