@@ -270,7 +270,7 @@ client.on("message", async message => {
   let msg = message.content.startsWith;
   let args = messageArray.slice(1);
   
-  if(cmd === `!say`){
+  if(msg === `!say`){
     let sayMessage = args.join(" ");
     message.delete();
     message.channel.send(sayMessage);
