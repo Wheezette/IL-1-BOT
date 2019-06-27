@@ -12,10 +12,15 @@ class Clear extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-var
     let messagecount = parseInt(args.join(' '));
-    if(!messagecount) return message.channel.send("Nie.");
-    message.channel.fetchMessages({
+    if (isNaN(messagecount)) {
+        return message.reply('Ilość wiadomości do wyczyszczenia musi być cyfrą.');
+    }
+    if (messagecount <= 0 || messagecount > 100) {
+      return message.channel.send("Ilość wiadomości do wyczyszczenia musi być cyfrą większą od zera i niższą od 100.")'
+    }
+    if (messagecount > 0 || messagecount < 100) { message.channel.fetchMessages({
       limit: messagecount
-    }).then(messages => message.channel.bulkDelete(messages));
+    }).then(messages => message.channel.bulkDelete(messages))};
     let purgeSuccessMessage = await message.channel.send(`Zostało wyczyszczone **${messagecount}** wiadomości z tego kanału!`);
     purgeSuccessMessage.delete(10000);
   }
