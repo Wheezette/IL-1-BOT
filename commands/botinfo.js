@@ -24,7 +24,7 @@ class BotInfo extends Command {
     .addField("• Serwery:", `${this.client.guilds.size.toLocaleString()}`)
     .addField("• Kanały:", `${this.client.channels.size.toLocaleString()}`)
     .addField("• Node:", `${process.version}`)
-    .addField("• Bot stworzony przez", `IceLeaders CEO (${client.users.get("591681694218846255").tag})`)
+    .addField("• Bot stworzony przez", `IceLeaders CEO (The Charlotte#4754)`)
     .setFooter(`2019 GraficznyBot`)
     message.channel.send(embed);
   }
