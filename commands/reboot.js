@@ -8,7 +8,7 @@ class Reboot extends Command {
       category: "Bot Admins",
       usage: "reboot",
       aliases: [],
-      permLevel: "Developer Bota"
+      permLevel: "IceLeaders Team - CEO"
     });
   }
 
@@ -16,7 +16,7 @@ class Reboot extends Command {
     const settings = this.client.getSettings(message.guild.id);
     if (settings.language === "pl") {
     //try {
-      await message.channel.send("**Trwa restart bota...**");
+      await message.channel.send("**Bot powinien zostać ponownie włączony, jeśli zaś nie to napisz do IceLeaders Team - CEO...**");
       this.client.commands.forEach(async cmd => {
         await this.client.unloadCommand(cmd);
       });
@@ -26,17 +26,6 @@ class Reboot extends Command {
     //}
     }
     const settings = this.client.getSettings(message.guild.id);
-    if (settings.language === "en") {
-    //try {
-      await message.channel.send("**The bot is being restarted....**");
-      this.client.commands.forEach(async cmd => {
-        await this.client.unloadCommand(cmd);
-      });
-      process.exit(1);
-    //} catch (e) {
-      //console.log(e);
-    //}
-    }
   }
 }
 
