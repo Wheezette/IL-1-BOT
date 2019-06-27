@@ -12,6 +12,9 @@ class Say extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-var
     //let sayMessage = args.join(" ");
+    const sayEmbed = new Discord.RichEmbed()
+    .setDescription("Musisz podać wiadomość do wysłania.")
+    if(!args[0]) return message.channel.send(sayEmbed);
     message.delete();
     message.channel.send(args.join(" "));
   }
