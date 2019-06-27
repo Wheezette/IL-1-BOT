@@ -7,7 +7,7 @@ class Reload extends Command {
       description: "Reloads a command that has been modified.",
       category: "Bot Admins",
       usage: "reload [command]",
-      permLevel: "Developer Bota"
+      permLevel: "Właściciel Bota"
     });
   }
 
