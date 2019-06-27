@@ -30,6 +30,7 @@ class Serverinfo extends Command {
     .addField("Właściciel(ka):", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
     .setFooter(`${moment(message.createdAt).format('HH:mm:ss')} | Użył(a): ${message.author.tag}.`);
     message.channel.send(serverembed);
+    //message.channel.send(`**INFORMACJE O SERWERZE**
   }
 }
 
