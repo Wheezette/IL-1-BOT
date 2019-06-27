@@ -11,8 +11,8 @@ class Clear extends Command {
   }
 
   async run(message, args, level) { // eslint-disable-line no-unused-var
-    if(!args[0]) return message.channel.send("Nie!");
     let messagecount = parseInt(args.join(' '));
+    if(!messagecount) return message.channel.send("Nie.");
     message.channel.fetchMessages({
       limit: messagecount
     }).then(messages => message.channel.bulkDelete(messages));
