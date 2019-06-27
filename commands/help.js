@@ -46,7 +46,7 @@ class Help extends Command {
         output += `${settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
       });
       const helpmsg = new Discord.RichEmbed()
-        .setColor('RANDOM')
+        .setColor('62eccc')
         .setTitle('Moje Komendy')
         .setDescription("Poniżej znajduje się spis wszystkich moich komend.")
         .addField(':shield: Główne (3):', '`botinfo`, `mylevel`')
@@ -54,7 +54,7 @@ class Help extends Command {
         .addField(':tools: Administracyjne (1):', '`config`')
         .addField(':frame_photo: Zdjęcia (0):', '*Brak komend w tej kategorii*')
         .addField(':information_source: Information (2):', '`serverinfo`, `profile`')
-        .addField('Adm. Bota (3):', '`reload`, `reboot`, `eval`')
+        .addField(':poop: Adm. Bota (3):', '`reload`, `reboot`, `eval`')
         .setFooter(`Komenda została użyta przez ${message.author.tag}.`)
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
       message.channel.send(helpmsg);
@@ -66,9 +66,10 @@ class Help extends Command {
         command = this.client.commands.get(command);
         if (level < this.client.levelCache[command.conf.permLevel]) return;
         const embed123 = new Discord.RichEmbed()
-        .setAuthor(`Komenda ${command.help.name}`)
+        .setColor('62eccc')
+        .setAuthor(`Sprawdzanie komendy: ${command.help.name}`)
         .setDescription(`${command.help.description} \n**Użycie:** ${command.help.usage} \n**Aliasy:** ${command.conf.aliases.join(", ")}`)
-        .setFooter(`${moment(message.createdAt).format('HH:mm:ss')} | Użył(a): ${message.author.tag}.`);
+        .setFooter(`Komenda została użyta przez ${message.author.tag}.`);
         message.channel.send(embed123);
         //message.channel.send(`= ${command.help.name} = \n${command.help.description}\nUżycie: ${command.help.usage}\nAliasy: ${command.conf.aliases.join(", ")}`, {code:"asciidoc"});
       }
