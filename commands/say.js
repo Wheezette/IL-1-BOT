@@ -15,4 +15,5 @@ class Say extends Command {
     message.delete();
     message.channel.send(args.join(" "));
   }
+}
 module.exports = Say;
