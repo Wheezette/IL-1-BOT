@@ -11,8 +11,8 @@ class Say extends Command {
   }
 
   async run(message, args, level) { // eslint-disable-line no-unused-var
-    let sayMessage = args.join(" ");
+    //let sayMessage = args.join(" ");
     message.delete();
-    message.channel.send(sayMessage);
+    message.channel.send(args.join(" "));
   }
 module.exports = Say;
