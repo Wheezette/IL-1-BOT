@@ -11,10 +11,7 @@ const readdir = promisify(require("fs").readdir);
 const Enmap = require("enmap");
 const klaw = require("klaw");
 const path = require("path");
-
-class GuideBot extends Discord.Client {
-  constructor(options) {
-    super(options);
+//const bot = new Discord.Client();
 
     // Here we load the config.js file that contains our token and our prefix values.
     this.config = require("./config.js");
@@ -265,6 +262,19 @@ client.on("ready", e => {
     }
 
   }, 10000);
+});
+
+client.on("message", async message => {
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let msg = message.content.startsWith;
+  let args = messageArray.slice(1);
+  
+  if(cmd === `!say`){
+    let sayMessage = args.join(" ");
+    message.delete();
+    message.channel.send(sayMessage);
+  }
 });
 
 client.on("disconnect", () => client.logger.warn("Bot is disconnecting..."))
