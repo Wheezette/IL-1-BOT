@@ -22,7 +22,7 @@ class Config extends Command {
       usage: "config <view/get/edit> <klucz> <wartość>",
       guildOnly: true,
       aliases: ["setting", "settings"],
-      permLevel: "Administrator"
+      permLevel: "Administrator Serwera"
     });
   }
 
