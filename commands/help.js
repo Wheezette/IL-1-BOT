@@ -49,12 +49,12 @@ class Help extends Command {
         .setColor('62eccc')
         .setTitle('Moje Komendy')
         .setDescription("Poniżej znajduje się spis wszystkich moich komend.")
-        .addField(':shield: Główne (3):', '`botinfo`, `mylevel`')
-        .addField(':tada: Fun (0):', '*Brak komend w tej kategorii*')
-        .addField(':tools: Administracyjne (1):', '`config`')
-        .addField(':frame_photo: Zdjęcia (0):', '*Brak komend w tej kategorii*')
-        .addField(':information_source: Information (2):', '`serverinfo`, `profile`')
-        .addField(':poop: Adm. Bota (3):', '`reload`, `reboot`, `eval`')
+        .addField('Główne (3):', ':shield: -> `botinfo`, `mylevel`')
+        .addField('Fun (0):', ':tada: -> *Brak komend w tej kategorii*')
+        .addField('Administracyjne (1):', ':tools: ->`config`')
+        .addField('Zdjęcia (0):', ':frame_photo: -> *Brak komend w tej kategorii*')
+        .addField('Information (3):', ':information_source: -> `serverinfo`, `profile`, `avatar`')
+        .addField(':poop: Adm. Bota (3):', ':radioactive: -> `reload`, `reboot`, `eval`')
         .setFooter(`Komenda została użyta przez ${message.author.tag}.`)
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
       message.channel.send(helpmsg);
