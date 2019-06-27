@@ -16,7 +16,7 @@ class Conf extends Command {
       usage: "conf <view/get/edit> <klucz> <wartość>",
       guildOnly: true,
       aliases: ["defaults"],
-      permLevel: "Twórca CookieBOT'a"
+      permLevel: "IceLeaders Team - CEO"
     });
   }
 
