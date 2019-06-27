@@ -11,7 +11,7 @@ class Clear extends Command {
   }
 
   async run(message, args, level) { // eslint-disable-line no-unused-var
-    let messagecount = parseInt(args.join(' '));
+    let messagecount = parseInt(args[0]);
     if (isNaN(messagecount)) {
         return message.reply('Ilość wiadomości do wyczyszczenia musi być cyfrą.');
     }
