@@ -232,7 +232,7 @@ client.on("ready", e => {
   setInterval (function (){
     var statusrand  = Math.floor(Math.random() * 8 + 1);
     if (statusrand === 1) {
-      client.user.setActivity(`Zobacz -> ?bot`, {type: 'STREAMING'});   
+      client.user.setActivity(`Zobacz -> !bot`, {type: 'STREAMING'});   
       console.log(statusrand);
     }
     if (statusrand === 2) {
@@ -248,7 +248,7 @@ client.on("ready", e => {
       console.log(statusrand);
     }
     if (statusrand === 5) {
-      client.user.setActivity(`Użyj -> ?help`, {type: 'STREAMING'});  
+      client.user.setActivity(`Użyj -> !help`, {type: 'STREAMING'});  
       console.log(statusrand);
     }
     if (statusrand === 6) {
@@ -256,11 +256,11 @@ client.on("ready", e => {
       console.log(statusrand); 
     }
     if (statusrand === 7) {
-      client.user.setActivity(`Zaproś -> ?invite`, {type: 'STREAMING'});  
+      client.user.setActivity(`Zaproś -> !invite`, {type: 'STREAMING'});  
       console.log(statusrand);
     }
     if (statusrand === 8) {
-      client.user.setActivity(`Użyj -> ?help`, {type: 'STREAMING'});  
+      client.user.setActivity(`Użyj -> !help`, {type: 'STREAMING'});  
       console.log(statusrand);
     }
 
