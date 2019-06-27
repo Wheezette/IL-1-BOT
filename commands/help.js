@@ -14,7 +14,7 @@ class Help extends Command {
   constructor(client) {
     super(client, {
       name: "help",
-      description: "Displays all the available commands for you.",
+      description: "Wyświetla liste komend bota.",
       category: "System",
       usage: "help [polecenie]",
       aliases: ["h", "halp"]
@@ -47,18 +47,18 @@ class Help extends Command {
       });
       const helpmsg = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .setTitle('Moje polecenia')
-        .setDescription("Moje komendy są naprawde super, znajdziesz je poniżej!")
+        .setTitle('Test')
+        .setDescription("Test")
         .addField('Główne (3):', '`stats`, `mylevel`')
         .addField('Fun (0):', '*Brak komend w tej kategorii*')
         .addField('Administracyjne (1):', '`config`')
         .addField('Zdjęcia (0):', '*Brak komend w tej kategorii*')
         .addField('Information (2):', '`serverinfo`, `profile`')
         .addField('Adm. Bota (3):', '`reload`, `reboot`, `eval`')
-        .setFooter('PortalCraft.pl ©2019')
+        .setFooter('2019 Graficzny Bot')
     //  message.channel.send(output, {code:"asciidoc", split: { char: "\u200b" }});
       //message.channel.send(helpmsg);
-      message.channel.send("**KOMENDY POMOCY**\n```(Główne):\n!botinfo - informacje o bocie\n!mylevel - poziom uprawnien w bocie.\n \n(Administracyjne):\n!config - konfiguracja serwera.\n\n(Zabawa):\nBrak komend.\n\n(Zdjęcia):\nBrak komend.\n\n(Informacja):\n!serverinfo - informacje o serwerze.\n!profile - informacje o użytkowniku.```\n**PortalCraft.pl ©2019**");
+      message.channel.send("**KOMENDY POMOCY**\n```(Główne):\n!botinfo - informacje o bocie\n!mylevel - poziom uprawnien w bocie.\n \n(Administracyjne):\n!config - konfiguracja serwera.\n\n(Zabawa):\nBrak komend.\n\n(Zdjęcia):\nBrak komend.\n\n(Informacja):\n!serverinfo - informacje o serwerze.\n!profile - informacje o użytkowniku.```\n**2019 GraficznyBot**");
     } else {
       // Show individual command's help.
       let command = args[0];
