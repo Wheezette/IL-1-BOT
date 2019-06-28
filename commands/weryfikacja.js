@@ -1,5 +1,6 @@
 const Command = require("../base/Command.js");
 const Discord = require("discord.js");
+const db = require("quick.db");
 
 class Weryfikacja extends Command {
   constructor(client) {
@@ -14,7 +15,7 @@ class Weryfikacja extends Command {
     });
   }
 
-  async run(message, [action, key, ...value], level) { // eslint-disable-line no-unused-vars
+  async run(message, args, [action, key, ...value], level) { // eslint-disable-line no-unused-vars
 
     // First we need to retrieve current guild settings
     const settings = message.settings;
@@ -23,23 +24,23 @@ class Weryfikacja extends Command {
     if (!this.client.settings.has(message.guild.id)) this.client.settings.set(message.guild.id, {});
   
     // Secondly, if a user does `-set edit <key> <new value>`, let's change it
-    if (action === "edit") {
+    if (action === "channel") {
       // User must specify a key.
-      if (!key) return message.channel.send("Musisz podać klucz, który chcesz edytować.");
+      if (!args[1]) return message.channel.send("Musisz podać klucz, który chcesz edytować.");
       // User must specify a key that actually exists!
-      if (!settings[key]) return message.channel.send("Podany przez Ciebie klucz nie istnieje.");
+      //if (!settings[key]) return message.channel.send("Podany przez Ciebie klucz nie istnieje.");
       // User must specify a value to change.
       const joinedValue = value.join(" ");
       if (joinedValue.length < 1) return message.channel.send("Podaj wartość, która ma zostać ustawiona.");
       // User must specify a different value than the current one.
-      if (joinedValue === settings[key]) return message.channel.send("To ustawienie zawiera już wartość, którą podałeś(aś).");
+      if (joinedValue === db.get("weryfikacja.channel")) return message.channel.send("To ustawienie zawiera już wartość, którą podałeś(aś).");
 
       // If the guild does not have any overrides, initialize it.
-      if (!this.client.settings.has(message.guild.id)) this.client.settings.set(message.guild.id, {});
+      //if (!this.client.settings.has(message.guild.id)) this.client.settings.set(message.guild.id, {});
 
       // Modify the guild overrides directly.
-      this.client.settings.set(message.guild.id, joinedValue, key);
-      message.channel.send(`Klucz **${key}** został edytowany na **${joinedValue}**.`);
+      db.set("weryfikacja.channel" + joinedValue); 
+      message.channel.send(`Kanał weryfikacji został zmieniony na **${joinedValue}** (${message.guild.channels.get(joinedValue).name}).`);
     } else
   
     // If a user does `-set del <key>`, let's ask the user if they're sure...
