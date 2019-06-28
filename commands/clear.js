@@ -12,9 +12,15 @@ class Clear extends Command {
 
   async run(message, args, level) { // eslint-disable-line no-unused-var
     let messagecount = parseInt(args.join(" "));
+    let errEmb = new Discord.RichEmbed()
+    .setColor("bc3b3b")
+    .setAuthor("Wystąpił Błąd")
+    .setDescription("Wymagane jest podanie ilości wiadomości do wyczyszczenia.\n**Poprawne użycie:** `!clear <ilość>`.")
+    .setFooter(`Jeśli błąd nie ustąpi napisz do programisty bota.`);
     
+    message.delete();
     if(!args[0]) {
-      return message.channel.send("Musisz podać ilość wiadomości do wyczyszczenia.");
+      return message.channel.send(errEmb);
     } else {
       
     //if (isNaN(messagecount)) {
