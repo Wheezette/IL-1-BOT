@@ -19,7 +19,13 @@ class Clear extends Command {
     .setDescription("Wymagane jest podanie ilości wiadomości do wyczyszczenia.\n**Poprawne użycie:** `!clear <ilość>`.")
     .setFooter(`Jeśli błąd nie ustąpi napisz do programisty bota.`);
     
-    //message.delete();
+    let succEmb = new Discord.RichEmbed()
+    .setColor("55d959")
+    .setAuthor("Powodzenie")
+    .setDescription("Wiadomości na chacie zostały wyczyszczone.\n**Ilość wiadomości:** `" + args.join(" ") + "`.")
+    .setFooter(`Komenda użyta przez ${message.author.tag}.`);
+    
+    message.delete();
     if(!args[0]) {
       return message.channel.send(errEmb);
     } else {
@@ -33,7 +39,8 @@ class Clear extends Command {
       message.channel.fetchMessages({
         limit: messagecount
       }).then(messages => message.channel.bulkDelete(messages))};
-      let purgeSuccessMessage = await message.channel.send(`Zostało wyczyszczone **${messagecount}** wiadomości z tego kanału!`);
+      let purgeSuccessMessage = await message.channel.send(succEmb);
+      //let purgeSuccessMessage = await message.channel.send(`Zostało wyczyszczone **${messagecount}** wiadomości z tego kanału!`);
       purgeSuccessMessage.delete(10000);
    }
 }
