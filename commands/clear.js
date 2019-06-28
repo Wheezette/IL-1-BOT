@@ -18,7 +18,7 @@ class Clear extends Command {
     .setDescription("Wymagane jest podanie ilości wiadomości do wyczyszczenia.\n**Poprawne użycie:** `!clear <ilość>`.")
     .setFooter(`Jeśli błąd nie ustąpi napisz do programisty bota.`);
     
-    message.delete();
+    //message.delete();
     if(!args[0]) {
       return message.channel.send(errEmb);
     } else {
