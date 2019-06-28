@@ -18,6 +18,8 @@ const config = {
   "welcomeChannel": "lobby",
   "welcomeMessage": "Witaj **{MEMBER}** :wave:. Dołączyłeś(aś) właśnie na nasz serwer discord.",
   "welcomeEnabled": "true",
+  "verifyChannel": "weryfikacja",
+  "verifyEnabled": "true",
 },
   permLevels: [
     { level: 0,
