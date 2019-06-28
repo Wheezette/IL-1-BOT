@@ -87,4 +87,4 @@ class Weryfikacja extends Command {
   }
 }
 
-module.exports = Config;
+module.exports = Weryfikacja;
