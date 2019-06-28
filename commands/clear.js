@@ -19,16 +19,29 @@ class Clear extends Command {
     .setDescription("Wymagane jest podanie ilości wiadomości do wyczyszczenia.\n**Poprawne użycie:** `!clear <ilość>`.")
     .setFooter(`Jeśli błąd nie ustąpi napisz do programisty bota.`);
     
+    let errEmbb = new Discord.RichEmbed()
+    .setColor("bc3b3b")
+    .setAuthor("Wystąpił Błąd")
+    .setDescription("Bot nie ma uprawnień do wykonania komendy `" + message.content + "`.\n**Dodaj uprawnienie:** `MANAGE_MESSAGES` (Zarządzanie Wiadomościami) dla bota.")
+    .setFooter(`Jeśli błąd nie ustąpi napisz do programisty bota.`);
+    
     let succEmb = new Discord.RichEmbed()
     .setColor("55d959")
     .setAuthor("Powodzenie")
     .setDescription("Wiadomości na chacie zostały wyczyszczone.\n**Ilość wiadomości:** `" + args.join(" ") + "`.")
     .setFooter(`Komenda użyta przez ${message.author.tag}.`);
     
-    message.delete();
+    //if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+      //message.channel.send(errEmbb);
+      //return;
+    if (!message.channel.permissionsFor(client.user).hasPermission("MANAGE_MESSAGES")) {
+      message.channel.send(errEmbb);
+      return;
+    }
     if(!args[0]) {
       return message.channel.send(errEmb);
     } else {
+      message.delete();
       
     //if (isNaN(messagecount)) {
         //return message.reply('Ilość wiadomości do wyczyszczenia musi być cyfrą.');
