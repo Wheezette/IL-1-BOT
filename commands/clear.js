@@ -34,10 +34,6 @@ class Clear extends Command {
     //if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
       //message.channel.send(errEmbb);
       //return;
-    if (!client.user.hasPermission("MANAGE_MESSAGES")) {
-      message.channel.send(errEmbb);
-      return;
-    }
     if(!args[0]) {
       return message.channel.send(errEmb);
     } else {
