@@ -77,7 +77,7 @@ class Weryfikacja extends Command {
       Object.entries(settings).forEach(([key, value]) => {
         array.push(`${key}${" ".repeat(15 - key.length)}::  ${value}`); 
       });
-      await message.channel.send("**KONFIGURACJA SERWERA** \n```asciidoc\n" + `${array.join("\n")}` + "``` Wersja bota z dnia 27.06.2019r.");
+      await message.channel.send("**WERYFIKACJA SERWEROWA - KONFIGURACJA** \n```asciidoc\n" + `${array.join("\n")}` + "``` Wersja bota z dnia 28.06.2019r.");
     //  const confEmbed = new Discord.RichEmbed()
     //  .setAuthor("KONFIGURACJA SERWERA")
    //   .setDescription(`${array.join("\n")}`);
